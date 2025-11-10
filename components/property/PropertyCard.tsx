@@ -17,11 +17,7 @@ export default function PropertyCard({ property }: PropertyCardProps) {
   return (
     <div className="border rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white">
       {/* Image */}
-      <img
-        src={property.image}
-        alt={property.title}
-        className="w-full h-48 object-cover"
-      />
+    
 
       {/* Info Section */}
       <div className="p-4">
