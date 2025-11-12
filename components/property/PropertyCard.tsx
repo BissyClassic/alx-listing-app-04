@@ -1,13 +1,6 @@
 import React from "react";
+import { Property } from "@/interfaces";
 
-type Property = {
-  id: string | number;
-  title: string;
-  image: string;
-  location: string;
-  price: number;
-  description?: string;
-};
 
 type PropertyCardProps = {
   property: Property;

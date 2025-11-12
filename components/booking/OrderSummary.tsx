@@ -1,4 +1,17 @@
-const OrderSummary: React.FC<{ bookingDetails: any }> = ({ bookingDetails }) => (
+import React from "react";
+
+type BookingDetails = {
+  propertyName: string;
+  startDate: string;
+  totalNights: number;
+  bookingFee: number;
+  price: number;
+};
+
+
+const OrderSummary: React.FC<{ bookingDetails?: BookingDetails }> = ({ bookingDetails }) => {
+if (!bookingDetails) return null;
+  return (
   <div className="bg-white p-6 shadow-md rounded-lg">
     <h2 className="text-xl font-semibold">Review Order Details</h2>
     <div className="flex items-center mt-4">
@@ -26,5 +39,6 @@ const OrderSummary: React.FC<{ bookingDetails: any }> = ({ bookingDetails }) => 
     </div>
   </div>
 );
+};
 
 export default OrderSummary;

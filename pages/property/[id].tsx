@@ -1,12 +1,13 @@
 import { useRouter } from "next/router";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import PropertyDetail from "@/components/property/PropertyDetail";
+import { Property } from "@/interfaces";
+
 
 export default function PropertyDetailPage() {
   const router = useRouter();
   const { id } = router.query;
-  const [property, setProperty] = useState(null);
+  const [property, setProperty] = useState<Property | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -33,5 +34,4 @@ export default function PropertyDetailPage() {
     return <p>Property not found</p>;
   }
 
-  return <PropertyDetail property={property} />;
 }

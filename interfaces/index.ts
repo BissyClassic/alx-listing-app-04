@@ -17,12 +17,19 @@ export interface PropertyProps {
     discount: string;
 }
 // interfaces/index.ts
-export interface Property {
+export type Property = {
   id: number;
   name: string;
   location: string;
   price: number;
   rating: number;
+  title: string;
+  description: string;
+  category: string[];
   image: string;
+   address: {
+    city: string;
+    state: string;
+  };
 }
 

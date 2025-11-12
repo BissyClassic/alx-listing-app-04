@@ -1,17 +1,17 @@
 import React from "react";
-import type { PropertyProps } from "@/interfaces";
 import { Property } from "@/interfaces";
+import Image from "next/image";
 
-interface PropertyCardProps {
+type PropertyCardProps = {
   property: Property;
 }
 
 
-const PropertyCard: React.FC<{ Property: PropertyProps }> = ({ Property }) => {
+const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
  return (
     <article className="bg-green-400 rounded-lg shadow-sm font-medium overflow-hidden flex flex-cols">
         <div className="relative h-44 sm:h-52">
-            <img 
+            <Image 
             src="{property.image}"
             alt="{property.name}"
              className="w-full h-full object-cover"

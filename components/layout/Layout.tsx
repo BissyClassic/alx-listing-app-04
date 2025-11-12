@@ -5,7 +5,14 @@ import CancellationPolicy from "../booking/CancellationPolicy";
 import OrderSummary from "../booking/OrderSummary";
 
 
-const Layout: React.FC = ({ children }) => {
+import { ReactNode } from "react";  // ✅ Make sure this import is here
+
+
+type LayoutProps = {
+  children: ReactNode;               // ✅ Correct spelling
+};
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />
